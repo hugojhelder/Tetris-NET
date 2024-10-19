@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TetrisClient", "TetrisClient\TetrisClient.csproj", "{652583CE-71C3-45D7-B385-DA70F29377B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TetrisServer", "TetrisServer\TetrisServer.csproj", "{8DFF92C8-A1EF-40D7-85D4-977AA7FB11F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{652583CE-71C3-45D7-B385-DA70F29377B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652583CE-71C3-45D7-B385-DA70F29377B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652583CE-71C3-45D7-B385-DA70F29377B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652583CE-71C3-45D7-B385-DA70F29377B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DFF92C8-A1EF-40D7-85D4-977AA7FB11F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFF92C8-A1EF-40D7-85D4-977AA7FB11F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFF92C8-A1EF-40D7-85D4-977AA7FB11F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFF92C8-A1EF-40D7-85D4-977AA7FB11F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

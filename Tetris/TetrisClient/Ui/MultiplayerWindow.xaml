@@ -1,0 +1,91 @@
+﻿<Window x:Class="TetrisClient.Ui.MultiplayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:TetrisClient.Ui.Controls"
+        Title="Tetris" 
+        Background="#383838"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <controls:TetrisControl x:Name="PlayerTwoTetrisControl" Grid.Column="0" GridMargin="35" />
+        <controls:TetrisControl x:Name="PlayerOneTetrisControl" Grid.Column="1" GridMargin="0, 35, 35, 35" PanelMargin="0, 35, 35, 35" />
+        
+        <Grid Column="2" Margin="0, 35, 35, 35">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Grid Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Grid Row="0">
+                    <TextBlock Text="Next" FontSize="25" Foreground="White" TextAlignment="Center" Margin="0, 0, 0, 10"></TextBlock>
+                </Grid>
+                
+                <Grid x:Name="Preview" Row="1" Background="#000">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35" />
+                        <ColumnDefinition Width="35" />
+                        <ColumnDefinition Width="35" />
+                        <ColumnDefinition Width="35" />
+                        <ColumnDefinition Width="35" />
+                        <ColumnDefinition Width="35" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Grid>
+            
+            <Grid Row="1" Margin="0, 25, 0, 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Grid.Row="0" Text="Score" FontSize="25" Foreground="White" TextAlignment="Center" Margin="0, 0, 0, 5" />
+                    <TextBlock Grid.Row="1" x:Name="ScoreText" FontSize="25" Foreground="White" Background="#000" Text="0" TextAlignment="Center" />
+                    <TextBlock Grid.Row="2" Text="Level" FontSize="25" Foreground="White" TextAlignment="Center" Margin="0, 10, 0, 5" />
+                    <TextBlock Grid.Row="3" x:Name="LevelText" FontSize="25" Foreground="White" Background="#000" Text="1" TextAlignment="Center" />
+                    <TextBlock Grid.Row="4" Text="Lines" FontSize="25" Foreground="White" TextAlignment="Center" Margin="0, 10, 0, 5" />
+                    <TextBlock Grid.Row="5" x:Name="LinesText" FontSize="25" Foreground="White" Background="#000" Text="0" TextAlignment="Center" />
+                </Grid>
+            </Grid>
+            
+            <Grid Row="2" Height="75" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Button Grid.Column="0" x:Name="StartButton" Content="Start Game" Click="StartGameButton_OnClick" Margin="0, 0, 10, 0" />
+                <Button Grid.Column="1" x:Name="StopButton" Content="Stop Game" Click="StopButton_OnClick" Margin="10, 0, 0, 0" Background="DarkRed" Foreground="White" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
